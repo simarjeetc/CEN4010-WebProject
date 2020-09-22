@@ -8,7 +8,7 @@ function BookDetails(props){
 
     useEffect(() => {
         axios
-        .get(`/books/${props.match.params.bookid}`)
+        .get(`/book/${props.match.params.bookid}`)
         .then(res => {
             console.log(res)
             setBooks(res.data);
