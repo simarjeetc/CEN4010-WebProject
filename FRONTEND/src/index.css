@@ -31,7 +31,13 @@ body{
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
+}
 
+.book-search a{
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .brand a{
