@@ -14,6 +14,10 @@ function App() {
         <div className="brand">
             <a href="index.html">ThinkGeek</a>
         </div>
+        <div className="book-search"> 
+            <a href="genre">Genre</a>
+            <input type="text" placeholder="Search.."></input>
+        </div>
         <div className="header-links"> 
         <a href="cart.html">Cart</a>
         <a href="signin">Sign in</a>
