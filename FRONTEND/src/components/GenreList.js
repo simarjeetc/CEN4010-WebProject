@@ -1,8 +1,6 @@
-import BookDetails from './BookDetails'
-import React, { Component, useState, useEffect} from 'react';
-import {Link} from 'react-router-dom';
+
 import '../App.css';
-import axios from 'axios'
+
 
 
 

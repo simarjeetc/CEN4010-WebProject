@@ -1,11 +1,7 @@
 import React, { Component, useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import '../App.css';
-import axios from 'axios'
-import BookDetails from './BookDetails';
-import Home from './Home'
-import {BrowserRouter, Route} from 'react-router-dom'
-import '../index.css'
+import '../index.css';
 
 class GenreListClass extends Component{
 
@@ -20,10 +16,8 @@ class GenreListClass extends Component{
     }
         componentDidMount()
         {
-            // making call to the backend 
             fetch('/books')
                 .then(res => res.json())
-                // setting the state when getting results
                 .then(books => this.setState({books}, () => console.log('books fetched..', books)));
         }
 
