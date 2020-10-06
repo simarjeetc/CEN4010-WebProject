@@ -5,7 +5,7 @@ import Home from './components/Home'
 import BookDetails from './components/BookDetails'
 import ShoppingCart from './components/ShoppingCart'
 import WishList from './components/WishList'
-
+import UserReview from './components/UserReview'
 
 function App() {
   return (
@@ -21,7 +21,10 @@ function App() {
                 <a href="ShoppingCart">Cart 🛒</a>
 
         <Route path="/WishList/" component={WishList}/>
-                <a href="WishList">Wish List </a>
+                <a href="WishList">Wish List ⭐</a>
+
+        <Route path="/UserReview/" component={UserReview}/>
+                <a href="UserReview">Reviews 📝</a>        
                 
         <a href="signin">Sign in</a>
     </div>
