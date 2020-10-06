@@ -3,7 +3,8 @@ import {BrowserRouter, Route} from 'react-router-dom'
 import './App.css';
 import Home from './components/Home'
 import BookDetails from './components/BookDetails'
-import myFunction from'./components/GenreList'
+import GenreListClass from './components/GenreListClass';
+import genClick from './components/GenreList';
 
 
 
@@ -18,11 +19,13 @@ function App() {
             <a href="index.html">ThinkGeek</a>
         </div>
         <div class="dropdown">
-            <button onClick={myFunction} class="dropbtn">Genres</button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="/">Fantasy Fiction</a>
-                <a href="/">Science Fiction</a>
-                <a href="/">Speculative Fiction</a>
+        <button onClick={genClick} class="dropbtn">Genres</button>
+        <div id="Item" class="dropdown-content">
+                <div>
+                    <a className="genreItem1" onClick="test" href={"/genreList"}>Fantasy Fiction</a>
+                    <a className="genreItem2" href={"/genreList"}>Science Fiction</a>
+                    <a className="genreItem3" href={"/genreList"}>Speculative Fiction</a>
+                </div>
             </div>
         </div>
         <div className="header-links"> 
@@ -39,6 +42,7 @@ function App() {
         <div className="content">
         <Route path="/product/:bookid" component={BookDetails}/>
         <Route path="/" exact={true} component={Home} />
+        <Route path ="/genreList" component={GenreListClass}/>
         </div>
         
 

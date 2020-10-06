@@ -1,8 +1,15 @@
 import BookDetails from './BookDetails'
+import React, { Component, useState, useEffect} from 'react';
+import {Link} from 'react-router-dom';
+import '../App.css';
+import axios from 'axios'
 
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
+
+
+function genClick() {
+  document.getElementById("Item").classList.toggle("show");
 }
+
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
@@ -18,4 +25,4 @@ window.onclick = function(event) {
   }
 }
 
-export default myFunction;
+export default genClick;
