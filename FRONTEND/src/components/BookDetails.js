@@ -22,7 +22,8 @@ return (
 <div>
    
          {books.name} 
-
+        <button className = "Atc-button">Add to Cart</button>
+        <button className = "Atc-button">Add to Wish List</button>
 </div>
     )
 }

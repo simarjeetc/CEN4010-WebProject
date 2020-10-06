@@ -39,6 +39,8 @@ class Home extends Component {
                     </div>
                 <div className="product-name">{book.author}</div>
                 <div className="product-price">{book.price}</div>
+                <button className = "Atc-button">Add to Cart</button>
+                <button className = "Atc-button">Add to Wish List</button>
                     </div>
                     
                     
