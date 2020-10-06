@@ -158,3 +158,11 @@ a:hover{
   margin-top: 100px;
   margin-left: -75%;
 }
+
+.Reviews {
+  font-family: helvetica;
+  color: black;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: -75%;
+} 
