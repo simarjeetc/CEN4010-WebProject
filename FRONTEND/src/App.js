@@ -4,6 +4,7 @@ import './App.css';
 import Home from './components/Home'
 import BookDetails from './components/BookDetails'
 import ShoppingCart from './components/ShoppingCart'
+import WishList from './components/WishList'
 
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
         <div className="header-links"> 
         <Route path="/ShoppingCart/" component={ShoppingCart}/>
                 <a href="ShoppingCart">Cart 🛒</a>
+
+        <Route path="/WishList/" component={WishList}/>
+                <a href="WishList">Wish List </a>
                 
         <a href="signin">Sign in</a>
     </div>

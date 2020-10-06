@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import '../App.css';
 
 
-
 function emptyCart() {  // RUNS THIS IF NOTHING IS ADDED TO SHOPPING CART
     
     return (
@@ -16,7 +15,7 @@ function emptyCart() {  // RUNS THIS IF NOTHING IS ADDED TO SHOPPING CART
         
     
     </div>
-
+ 
     )
 }
 

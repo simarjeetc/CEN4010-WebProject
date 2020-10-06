@@ -148,7 +148,13 @@ a:hover{
   color: black;
   position: absolute;
   margin-top: 100px;
-  margin-left: -85%;
+  margin-left: -75%;
 }
 
-
+.WishList {
+  font-family: helvetica;
+  color: black;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: -75%;
+}
