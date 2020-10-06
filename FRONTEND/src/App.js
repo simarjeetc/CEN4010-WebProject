@@ -3,6 +3,9 @@ import {BrowserRouter, Route} from 'react-router-dom'
 import './App.css';
 import Home from './components/Home'
 import BookDetails from './components/BookDetails'
+import myFunction from'./components/GenreList'
+
+
 
 
 function App() {
@@ -14,9 +17,13 @@ function App() {
         <div className="brand">
             <a href="index.html">ThinkGeek</a>
         </div>
-        <div className="book-search"> 
-            <a href="genre">Genre</a>
-            <input type="text" placeholder="Search.."></input>
+        <div class="dropdown">
+            <button onClick={myFunction} class="dropbtn">Genres</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="/">Fantasy Fiction</a>
+                <a href="/">Science Fiction</a>
+                <a href="/">Speculative Fiction</a>
+            </div>
         </div>
         <div className="header-links"> 
         <a href="cart.html">Cart</a>
