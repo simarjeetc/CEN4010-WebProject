@@ -44,6 +44,7 @@ body{
 .header-links a{
   color: #ffffff;
   text-decoration: none;
+  margin: 20px;
 }
 
 .header-links a:hover{
@@ -117,3 +118,37 @@ a:hover{
 .product-rating{
   margin-bottom: 1rem;
 }
+
+.Atc-button {
+  box-shadow: 0px 1px 0px 0px #f0f7fa;
+  background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+  background-color:#33bdef;
+  border-radius:17px;
+  border:0px solid #057fd0;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family: Helvetica;
+  font-size:12px;
+  font-weight:bold;
+  padding:9px 26px;
+  text-decoration:none;
+  text-shadow:0px -1px 0px #5b6178;
+}
+.Atc-button:hover {
+  background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+  background-color:#019ad2;
+}
+.Atc-button:active {
+  position:relative;
+  top:1px;
+}
+.Cart {
+  font-family: helvetica;
+  color: black;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: -85%;
+}
+
+
