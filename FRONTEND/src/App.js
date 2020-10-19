@@ -20,7 +20,7 @@ function App() {
     <div className="grid-container">
     <header className="header">
         <div className="brand">
-            <a class = "Title " href="index.html">Geek Text</a>
+            <a class = "Title " href="/">Geek Text</a>
         </div>
         <div class="dropdown">
         <button onClick={genClick} class="dropbtn">Genres</button>

@@ -52,8 +52,8 @@ return (
                 <ul>
                     <li>
                         Price: {books.price}
-                        <button className = "Atc-button">Add to Cart</button>
-                        <button className = "Atc-button">Add to Wish List</button>
+                     <button className = "Atc-button">Add to Cart</button>
+                     <button className = "Atc-button">Add to Wish List</button>
                     </li>
                     <li>
                         Qty: <select>
