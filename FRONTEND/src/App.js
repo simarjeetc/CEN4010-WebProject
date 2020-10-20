@@ -22,7 +22,7 @@ function App() {
     <div className="grid-container">
     <header className="header">
         <div className="brand">
-            <a class = "Title " href="index.html">Geek Text</a>
+            <a class = "Title " href="/">Geek Text</a>
         </div>
         <Route path ="/" exact={true} component={ClassList}/>
         <div className="header-links"> 
