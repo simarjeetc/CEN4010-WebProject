@@ -20,17 +20,21 @@ function BookDetails(props){
     }, [])
 
 return (
+    <div>
 
-<div className = "details">
     <div className = "back-to-home">
     <Link to="/" Back to home page></Link>
     </div>
+    
     <div className="details">
 
      <div className="details-image">
-        <img src={books.image} alt="book"></img>
+        <img  src={books.image} alt="book"></img>
      </div>
 
+     
+
+    
     <div className="details-info">
        <ul>
            <li>
@@ -38,23 +42,64 @@ return (
            </li>
            
            <li>
-              Price: <b>${books.price}</b>
+              <div>
+              <b> Genre: </b> {books.genre}
+              </div> 
            </li>
 
+           <br></br>
+
            <li>
-              Description:
+             <b> Description: </b>
               <div>
                   {books.desc}
               </div> 
            </li>
 
+           <br></br>
+
+           <li>
+             <b> Publishing info: </b>
+              <div>
+                  {books.publisher}, {books.date}
+              </div> 
+           </li>
+
+           </ul> 
+    </div>
+
+    <div className="author-info">
+     <ul>
+           <li>
+           <p>
+           Author name: <a href={books.authorLink}><h4>{books.author}</h4></a>
+           </p>
+           </li>
+
+           <li>
+               <h4>Author bio: </h4>
+               {books.authorBio}
+           </li>
+
+        </ul>
+     </div>
+
            <div className="details-action">
                 <ul>
                     <li>
-                        Price: {books.price}
-                     <button className = "Atc-button">Add to Cart</button>
-                     <button className = "Atc-button">Add to Wish List</button>
+                        Price: <b>${books.price}</b>
                     </li>
+
+                    <li>
+                     <button className = "Atc-button">Add to Cart</button>
+
+                    </li>
+
+                    <li>
+                    <button className = "Atc-button">Add to Wish List</button>
+
+                    </li>
+
                     <li>
                         Qty: <select>
                             <option>1</option>
@@ -65,14 +110,7 @@ return (
                     </li>
                 </ul>
            </div>
-
-
-       </ul> 
     </div>
-
-
-</div>
-
 </div>
     )
 }
