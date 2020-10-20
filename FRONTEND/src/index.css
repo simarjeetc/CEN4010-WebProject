@@ -125,14 +125,35 @@ a:hover{
   margin-bottom: 1rem;
 }
 
+/*============*/
 
-.dropbtn:hover, .dropbtn:focus {
-  background-color: darkblue;
+.dropbtn {
+	box-shadow: 0px 0px 11px 0px #bcb5f2;
+	background-color:lightskyblue;
+	border-radius:28px;
+	border:1px solid #bfbfbf;
+	display:inline-block;
+	cursor:pointer;
+	color:white;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:8px 31px;
+	text-decoration:none;
 }
+
+.dropbtn:hover {
+	background-color:lightskyblue;
+  }
+ 
+  .dropbtn:active {
+	position:relative;
+	top:1px;
+  }
 
 .dropdown {
   position: relative;
-  right: 80px;
+  right: -80px;
   display: inline-block;
 }
 
@@ -156,6 +177,9 @@ a:hover{
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
+
+/*============*/
+
 .Atc-button {
   margin-left: 70px;
   box-shadow: 0px 1px 0px 0px #f0f7fa;

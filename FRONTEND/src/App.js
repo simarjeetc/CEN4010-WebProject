@@ -4,14 +4,16 @@ import './App.css';
 import Home from './components/Home'
 import BookDetails from './components/BookDetails'
 
-import GenreListClass from './components/GenreListClass';
-import genClick from './components/GenreList';
+import GenreFantasy from './components/GenreFantasy';
+import GenreScience from './components/GenreScience';
+import GenreSpeculative from './components/GenreSpeculative';
+
 
 
 import ShoppingCart from './components/ShoppingCart'
 import WishList from './components/WishList'
 import UserReview from './components/UserReview'
-
+import ClassList from './components/ClassList';
 
 function App() {
   return (
@@ -22,16 +24,7 @@ function App() {
         <div className="brand">
             <a class = "Title " href="/">Geek Text</a>
         </div>
-        <div class="dropdown">
-        <button onClick={genClick} class="dropbtn">Genres</button>
-        <div id="Item" class="dropdown-content">
-                <div>
-                    <a className="genreItem1" onClick="test" href={"/genreList"}>Fantasy Fiction</a>
-                    <a className="genreItem2" href={"/genreList"}>Science Fiction</a>
-                    <a className="genreItem3" href={"/genreList"}>Speculative Fiction</a>
-                </div>
-            </div>
-        </div>
+        <Route path ="/" exact={true} component={ClassList}/>
         <div className="header-links"> 
         <Route path="/ShoppingCart/" component={ShoppingCart}/>
                 <a href="ShoppingCart">Cart 🛒</a>
@@ -55,7 +48,9 @@ function App() {
         <Route path="/product/:bookid" component={BookDetails}/>
         
         <Route path="/" exact={true} component={Home} />
-        <Route path ="/genreList" component={GenreListClass}/>
+        <Route path ="/Fantasy" component={GenreFantasy}/>
+        <Route path ="/Science" component={GenreScience}/>
+        <Route path ="/Speculative" component={GenreSpeculative}/>
         </div>
         
 

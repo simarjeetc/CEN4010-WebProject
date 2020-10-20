@@ -19,6 +19,15 @@ function BookDetails(props){
         })
     }, [])
 
+    const [cart,setCart] = useState([]);
+    const [page, setPage] = useState('products');
+
+    const addToCart = (books) => {
+        alert( books.name + " has been added to your Cart! " + " There are " + (cart.length + 1) + " items in your cart." );
+    setCart([...cart,books]);
+    console.log(cart);
+    }
+
 return (
     <div>
 
@@ -91,13 +100,17 @@ return (
                     </li>
 
                     <li>
-                     <button className = "Atc-button">Add to Cart</button>
+                    <button onClick = {() => addToCart(books) }className = "Atc-button">Add to Cart</button>
 
                     </li>
 
                     <li>
+
                     <button className = "Wls-button">⭐</button>
-                    
+             
+                     <a href = "http://localhost:3000/WishList"><button className = "Atc-button">Add to WishList</button> </a>
+
+
                     </li>
 
                     <li>
