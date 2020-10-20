@@ -96,8 +96,8 @@ return (
                     </li>
 
                     <li>
-                    <button className = "Atc-button">Add to Wish List</button>
-
+                    <button className = "Wls-button">⭐</button>
+                    
                     </li>
 
                     <li>
