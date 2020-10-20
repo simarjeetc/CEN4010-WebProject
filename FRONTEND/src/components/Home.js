@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import '../App.css';
+import './ClassList'
 
 class Home extends Component {
 
@@ -25,6 +26,7 @@ class Home extends Component {
 
 
     render() {
+
         return <ul className="products"> 
         
             {this.state.books.map(book =>
@@ -39,6 +41,7 @@ class Home extends Component {
                     </div>
                 <div className="product-name">{book.author}</div>
                 <div className="product-price">{book.price}</div>
+                <div className="product-genre">{book.genre}</div>
                 <button className = "Atc-button">Add to Cart</button>
                 <button className = "Atc-button">Add to Wish List</button>
                     </div>
@@ -51,10 +54,5 @@ class Home extends Component {
     }
 
 }
-
-
-
-
-
 
 export default Home;
