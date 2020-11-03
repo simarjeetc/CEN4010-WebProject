@@ -220,6 +220,23 @@ a:hover{
   margin-top: 100px;
   margin-left: -75%;
 }
+.Wls-button {
+  background-color: #33bdef; 
+  border: none;
+  color:  #33bdef;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+}
+.Wls-button {border-radius: 50%;}
+.Wls-button { transition-duration: 0.4s; }
+.Wls-button:hover {
+  background-color: #cff3f5; 
+  color: #33bdef;
+}
+
 
 .Reviews {
   font-family: helvetica;

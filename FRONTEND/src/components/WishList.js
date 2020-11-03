@@ -1,23 +1,27 @@
 import React, { Component, useState } from 'react';
-import {Link} from 'react-router-dom';
 import '../App.css';
+import {Link} from 'react-router-dom';
 
+var books = [];
 
-function WishList(){ // Runs if user has no boooks in wishlist
+function addtoWL() {
+  books.push();
+}
 
+function WishList(){ 
+  
   return(
     <div className = "WishList"> 
     <h1 className = "WishList-header">WishList</h1>
 
 
-    <h5>You have nothing in your wish list.</h5>
-    <h6>Continue browsing<a href="">Homepage</a></h6>
-        
+    <h5> </h5>
+    <h6>Continue browsing<a href="http://localhost:3000/"><button className = "">Homepage</button></a> </h6>  
     
     </div>
   )
 }
-
+ 
 
 
 

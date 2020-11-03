@@ -130,7 +130,7 @@ return (
                     </li>
 
                     <li>
-                     <a href = "http://localhost:3000/WishList"><button className = "Atc-button">Add to WishList</button> </a>
+                    <a> <button className = "Wls-button" onclick= "addtoWL()" >⭐</button> </a>
 
                     </li>
 
