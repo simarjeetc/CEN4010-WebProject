@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import '../App.css';
 import './ClassList'
+import WishList from './WishList';
 
 class Home extends Component {
 
@@ -24,7 +25,7 @@ class Home extends Component {
             .then(books => this.setState({books}, () => console.log('books fetched..', books)));
     }
 
-
+   
     render() {
 
         return <ul className="products"> 
@@ -44,7 +45,7 @@ class Home extends Component {
 
                 <a href = "http://localhost:3000/ShoppingCart"><button className = "Atc-button" >Add to Cart</button> </a>
                
-                <a> <button className = "Wls-button" onclick="addtoWL()" >⭐</button> </a>
+                <a> <button className = "Wls-button" >⭐</button> </a>
                
 
                     </div>
