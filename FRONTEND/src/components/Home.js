@@ -43,13 +43,9 @@ class Home extends Component {
                 <div className="product-price">{book.price}</div>
 
                 <a href = "http://localhost:3000/ShoppingCart"><button className = "Atc-button" >Add to Cart</button> </a>
-
-                <a> <button className = "Wls-button" onclick="addtoWL()" >⭐</button> </a>
-                
-
-                <a href = "http://localhost:3000/WishList"><button className = "Atc-button">Add to WishList</button> </a>
                
-
+                <a> <button className = "Wls-button" onclick="addtoWL()" >⭐</button> </a>
+               
 
                     </div>
                     
