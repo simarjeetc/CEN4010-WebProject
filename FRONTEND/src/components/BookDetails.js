@@ -2,10 +2,17 @@ import React, {useState, useEffect } from 'react'
 import axios from 'axios'
 import '../App.css';
 import {Link} from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal'
 
 function BookDetails(props){
     const [books, setBooks] = useState([])
     const [id, setId] = useState()
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     useEffect(() => {
         axios
@@ -38,8 +45,26 @@ return (
     <div className="details">
 
      <div className="details-image">
-        <img  src={books.image} alt="book"></img>
+        <img  src={books.image} onClick={handleShow} alt="book"></img>
      </div>
+
+     <Modal show={show} onHide={handleClose} animation={false}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body><img  src={books.image} onClick={handleShow} className="modal-image" alt="book"></img></Modal.Body>
+        <Button variant="primary" className = "modal-button" onClick={handleClose}>
+            Back
+          </Button>
+        <Modal.Footer>
+          <Button variant="primary" className = "modal-button" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
 
      
 
@@ -105,11 +130,7 @@ return (
                     </li>
 
                     <li>
-
-                    <button className = "Wls-button">⭐</button>
-             
-                     <a href = "http://localhost:3000/WishList"><button className = "Atc-button">Add to WishList</button> </a>
-
+                    <a> <button className = "Wls-button" onclick= "addtoWL()" >⭐</button> </a>
 
                     </li>
 
