@@ -35,6 +35,11 @@ function BookDetails(props){
     console.log(cart);
     }
 
+  const addToWishList = (books) =>{
+  const CurrentWishList = addToWishList.map;
+  console.log(CurrentWishList);
+}
+
 return (
     <div>
 
@@ -130,7 +135,7 @@ return (
                     </li>
 
                     <li>
-                    <a> <button className = "Wls-button" onclick= "addtoWL()" >⭐</button> </a>
+                    <a> <button className = "Wls-button" onClick= {addToWishList(books)} >⭐</button> </a>
 
                     </li>
 
