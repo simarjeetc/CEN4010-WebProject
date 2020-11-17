@@ -99,6 +99,28 @@ return (
               </div> 
            </li>
 
+           <br></br>
+
+           <li>
+             <b> Rating: </b>
+              <div>
+                  {books.rating} / 10
+              </div> 
+           </li>
+
+           <br></br>
+
+            <li>
+            <b> Reviews: </b>
+            <div>
+                {books.comments1} 
+                <br></br>
+                {books.comments2} 
+            </div> 
+            </li>
+
+
+
            </ul> 
     </div>
 
