@@ -38,11 +38,7 @@ function App() {
         <a href="signin">Sign in</a>
     </div>
     </header>
-
-    <aside>
-        Shopping Categories 
-    </aside>
-
+    
     <main className="main">
         <div className="content">
         <Route path="/product/:bookid" component={BookDetails}/>
