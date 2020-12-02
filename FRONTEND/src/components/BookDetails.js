@@ -4,6 +4,7 @@ import '../App.css';
 import {Link} from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal'
+import { useDispatch, useSelector } from 'react-redux';
 
 function BookDetails(props){
     const [qty, setQty] = useState(1);
@@ -15,7 +16,11 @@ function BookDetails(props){
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-
+    const [cart,setCart] = useState([]);
+    const [page, setPage] = useState('products');
+    const productList = useSelector(state => state.productList);
+    const {products, loading, error} = productList;
+    const dispatch = useDispatch();
 
     const handleAddToCart = () => {
         props.history.push("/ShoppingCart/" + props.match.params.bookid + "?qty=" + qty);
@@ -37,8 +42,7 @@ function BookDetails(props){
         })
     }, [])
 
-    const [cart,setCart] = useState([]);
-    const [page, setPage] = useState('products');
+
 
 return (
     <div>
