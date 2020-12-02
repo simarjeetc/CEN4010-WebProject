@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal'
 
 function BookDetails(props){
+    const [qty, setQty] = useState(1);
     const [books, setBooks] = useState([])
     const [id, setId] = useState()
 
@@ -13,6 +14,16 @@ function BookDetails(props){
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+
+
+    const handleAddToCart = () => {
+        props.history.push("/ShoppingCart/" + props.match.params.bookid + "?qty=" + qty);
+    }
+
+    function itemNum() {
+        return <h1>{cart.length}</h1>
+    }
 
     useEffect(() => {
         axios
@@ -28,12 +39,6 @@ function BookDetails(props){
 
     const [cart,setCart] = useState([]);
     const [page, setPage] = useState('products');
-
-    const addToCart = (books) => {
-        alert( books.name + " has been added to your Cart! " + " There are " + (cart.length + 1) + " items in your cart." );
-    setCart([...cart,books]);
-    console.log(cart);
-    }
 
 return (
     <div>
@@ -104,7 +109,7 @@ return (
            <li>
              <b> Rating: </b>
               <div>
-                  {books.rating} / 10
+                  {books.rating} / 5
               </div> 
            </li>
 
@@ -147,7 +152,7 @@ return (
                     </li>
 
                     <li>
-                    <button onClick = {() => addToCart(books) }className = "Atc-button">Add to Cart</button>
+                    <button onClick = {handleAddToCart} className = "Atc-button">Add to Cart</button>
 
                     </li>
 
@@ -157,7 +162,7 @@ return (
                     </li>
 
                     <li>
-                        Qty: <select>
+                    Qty: <select value= {qty} onChange= {(e) => {setQty(e.target.value)}}>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -167,8 +172,105 @@ return (
                 </ul>
            </div>
     </div>
-</div>
-    )
+{/*---html----------------comment and rating--------------------------------*/}
+
+<div class="formBox">
+            <textarea name="comments" id="comment" rows="4" cols="57" 
+            placeholder="Add a public comment..."></textarea>
+          </div>
+      <div class="formBox">
+            <input type="radio" id="star1" name="rating" value="1" />
+            <label for="star1" title="Sucks big time">1 star</label>
+
+            <input type="radio" id="star2" name="rating" value="2" />
+            <label for="star2" title="Kinda bad" >2 stars</label>
+
+            <input type="radio" id="star3" name="rating" value="3" />
+            <label for="star3" title="It's okay">3 stars</label>
+
+            <input type="radio" id="star4" name="rating" value="4" />
+            <label for="star4" title="Pretty good">4 stars</label>
+
+            <input type="radio" id="star5" name="rating" value="5" />
+            <label for="star5" title="Rocks!">5 stars</label>
+          </div>
+
+          <div class="formBox">
+            <input type ="checkbox" id="name" placeholder="Name" />
+            <label>Check to comment anonymously.</label>
+          </div>
+
+          <div class="formBox">
+            <button id="btn">Post Comment</button>
+          </div>
+          <div id="msg" class = "formBox">
+        <pre>User Comment and Rating Hisory:</pre>
+      </div>
+
+{/*---html----------------comment and rating--------------------------------------*/}
+    </div>
+  );
 }
+
+
+//*---javascript----------------comment and rating---------------------------------*/
+let usrComments = [];
+// example {id:1592304983049, title: 'Deadpool', year: 2015}
+const addComment = (event) => {
+
+  var userRating;
+  var userName;
+  var radio1 = document.getElementById("star1");
+  var radio2 = document.getElementById("star2");
+  var radio3 = document.getElementById("star3");
+  var radio4 = document.getElementById("star4");
+  var radio5 = document.getElementById("star5");
+  var radio6 = document.getElementById("name");
+
+  if (radio5.checked) userRating = 5;
+  else if (radio4.checked) userRating = 4;
+  else if (radio3.checked) userRating = 3;
+  else if (radio2.checked) userRating = 2;
+  else if (radio1.checked) userRating = 1;
+  else userRating = 0;
+
+  if(radio6.checked) userName = "Anonymous"
+  else userName = "Current User"
+
+  event.preventDefault(); //to stop the form submitting
+  let usrField = {
+    Date: Date.now(),
+    Name: userName,
+    //Name: document.getElementById("name").value,
+    Rating: userRating,
+    //Rating: document.getElementById('rate').value,
+    Comment: document.getElementById("comment").value,
+  };
+  // add in an array
+  usrComments.push(usrField);
+  //usrComments.push("<br>");
+
+
+  //document.forms[0].reset();
+  // to clear the form for the next entries
+  //document.querySelector("form").reset();
+
+  //for display purposes only
+  //console.warn('added' , {movies} );
+  let pre = document.querySelector("#msg pre");
+  pre.textContent = "\n" + JSON.stringify(usrComments, "\t", 2);
+
+  //saving to localStorage
+  localStorage.setItem('comments', JSON.stringify(usrComments) );
+  console.log(usrComments);
+};
+
+
+window.onload = function(){
+  document.getElementById("btn").addEventListener("click", addComment);
+}
+    
+//*---javascript----------------comment and rating---------------------------------------*/
+
 
 export default BookDetails;
