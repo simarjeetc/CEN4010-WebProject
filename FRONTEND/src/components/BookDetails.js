@@ -1,7 +1,8 @@
 import React, {useState, useEffect } from 'react'
 import axios from 'axios'
 import '../App.css';
-import {Link} from 'react-router-dom';
+import {Link, BrowserRouter, Route} from 'react-router-dom';
+import BookBrowsing from './BookBrowsing'
 
 function BookDetails(props){
     const [books, setBooks] = useState([])
@@ -21,7 +22,7 @@ function BookDetails(props){
 
 return (
     <div>
-
+        <Route path ="/" exact={true} component={BookBrowsing}/>
     <div className = "back-to-home">
     <Link to="/" Back to home page></Link>
     </div>
