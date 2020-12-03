@@ -4,16 +4,16 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require('mongoose');
+const { Router } = require("express");
 
 const app = express();
 
 app.set('view engine', 'ejs');
-
 app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(express.static("public"));
-
+app.use(express.json());
 mongoose.connect("mongodb://localhost:27017/websiteDB" , {useUnifiedTopology: true, useNewUrlParser: true,});
 
 // BOOKS COLLECTION OF THE MongoDB DATABASE
@@ -74,6 +74,34 @@ app.get("/users", function(req,res){
       }
   })
 });
+
+// WISHLISTS COLLECTION OF THE MongoDB DATABASE
+
+const WishlistSchema = {
+    bookid: String,
+    name:String,
+    image: String,
+    author : String,
+    price : String
+};
+
+// Model
+const Wishlists = mongoose.model("Wishlists" , WishlistSchema);
+
+app.get("/wishlists", function(req,res){
+  Wishlists.find(function(err, foundWistlist){
+      if (!err)
+      {
+         res.send(foundWistlist); 
+      }
+      else
+      {
+          res.send(err);
+      }
+  })
+});
+  
+module.exports = Wishlists;
 
 
 app.listen(5000, function() {
