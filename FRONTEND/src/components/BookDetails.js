@@ -5,7 +5,6 @@ import '../App.css';
 import {Link, BrowserRouter, Route} from 'react-router-dom';
 import BookBrowsing from './BookBrowsing'
 
-import {Link} from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal'
 import { useDispatch, useSelector } from 'react-redux';

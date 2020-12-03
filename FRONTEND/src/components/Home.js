@@ -40,12 +40,7 @@ class Home extends Component {
                         </div>
                         <div className="product-name">{book.author}</div>
                         <div className="product-price">{book.price}</div>
-                        <div className="product-genre">{book.genre}</div>
-                        <button className="Atc-button">Add to Cart</button>
-                        <button className="Atc-button">Add to Wish List</button>
 
-                        <a href="http://localhost:3000/ShoppingCart"><button className="Atc-button" >Add to Cart</button> </a>
-                        <a href="http://localhost:3000/WishList"><button className="Atc-button">Add to WishList</button> </a>
 
 
                     </div>

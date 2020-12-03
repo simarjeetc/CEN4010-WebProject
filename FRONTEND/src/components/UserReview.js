@@ -1,6 +1,7 @@
 import React, { Component, useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
+import Cookie from 'js-cookie';
 
 //jshint esversion:6
 
@@ -12,10 +13,19 @@ function UserReview() {
       <h5>No reviews have been given.</h5>
       <h3>Continue browsing<a href="">Homepage</a></h3>
 
-{/*-------------------comment and rating--------------------------------*/}
+      {/*-------------------comment and rating--------------------------------*/}
 
-<div class="reviewClass">
+      <div class="reviewClass">
         <fieldset class="reviewBox">
+        <div class="formBox">
+            <textarea
+              name="comments"
+              id="title"
+              rows="2"
+              cols="57"
+              placeholder="Enter a Book Title"
+            ></textarea>
+          </div>
           <div class="formBox">
             <textarea
               name="comments"
@@ -100,6 +110,7 @@ function download(filename, text) {
 let usrComments = [];
 // example {id:1592304983049, title: 'Deadpool', year: 2015}
 const addComment = () => {
+  var title;
   var eligible;
   var userRating;
   var userName;
@@ -131,6 +142,7 @@ const addComment = () => {
     Name: userName,
     //Name: document.getElementById("name").value,
     Rating: userRating,
+    Title: document.getElementById("title").value,
     //Rating: document.getElementById('rate').value,
     Comment: document.getElementById("comment").value,
   };
@@ -149,8 +161,9 @@ const addComment = () => {
   //setBooks JSON.stringify(usrComments);
   //saving to localStorage
   localStorage.setItem("comments", JSON.stringify(usrComments));
-  console.log(usrComments);
+  //console.log(usrComments);
 };
+
 
 
 export default UserReview;
