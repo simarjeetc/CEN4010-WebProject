@@ -221,22 +221,30 @@ a:hover{
   margin-left: -75%;
 }
 .Wls-button {
-  background-color: #33bdef; 
-  border: none;
-  color:  #33bdef;
-  padding: 8px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 10px;
+  margin-left: 70px;
+  box-shadow: 0px 1px 0px 0px #f0f7fa;
+  background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+  background-color:#33bdef;
+  border-radius:17px;
+  border:0px solid #057fd0;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family: Helvetica;
+  font-size:12px;
+  font-weight:bold;
+  padding:9px 26px;
+  text-decoration:none;
+  text-shadow:0px -1px 0px #5b6178;
 }
-.Wls-button {border-radius: 50%;}
-.Wls-button { transition-duration: 0.4s; }
 .Wls-button:hover {
-  background-color: #cff3f5; 
-  color: #33bdef;
+  background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+  background-color:#019ad2;
 }
-
+.Wls-button:active {
+  position:relative;
+  top:1px;
+}
 
 .Reviews {
   font-family: helvetica;
