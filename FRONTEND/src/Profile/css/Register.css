@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: unset;
+}
+
+text{
+  color: black;
+}
+
+
+ul {
+  margin-left: 1.5rem;
+  list-style: none;
+}
+.Atc-button{
+  margin-left: 0rem;
+}
+
+.Wls-button{
+  margin-left: 14rem;
+}
+
+button{
+  margin-bottom: 0.2rem;
+}
+
+button,
+input[type="submit"] {
+  margin-top: 1rem;
+  border: none;
+  background: none;
+  color: unset;
+  cursor: pointer;
+}
+
+/* general */
+
+.header-links{
+  margin-left: 10px;
+}
+
+body {
+  color: black;
+}
+
+h2 {
+  margin-bottom: 50rem;
+  color: black;
+}
+
+h4 {
+  margin-left: 0.5rem;
+  display: unset;
+}
+
+.form label{
+  color: black;
+}
+
+.dropbtn{
+  margin-left: -30rem;
+  margin-bottom: 1rem;
+}
+
+.page {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  padding: 1rem;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+/* form */
+
+.form label,
+.form input {
+  display: block;
+}
+.form input {
+  margin-bottom: 0.2rem;
+}
+.form label {
+  margin-bottom: 0.2rem;
+}
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+  margin-top: 0.5rem;
+  width: 200px;
+  padding: 0.1rem;
+  border: 1px solid #c2c2c2;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  font-size: 1.5rem;
+}
+.form input:focus {
+  border: 1px solid #50a4e9;
+  box-shadow: inset 0px 0px 5px rgba(38, 142, 228, 0.5);
+  outline: none;
+}
+.form input[type="submit"] {
+  padding: 0.1rem 0.5rem;
+  border: 1px solid #6aa051;
+  border-radius: 8px;
+  background-color: #3e19c5;
+  font-size: 1.5rem;
+}
+
+/* error notice */
+
+.error-notice {
+  color: black;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: 1px solid #e07c7c;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8d6d6;
+}
+.error-notice button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #df4343;
+  color: #ffffff;
+}
