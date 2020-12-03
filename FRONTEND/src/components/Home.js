@@ -42,7 +42,7 @@ class Home extends Component {
                 <div className="product-name">{book.author}</div>
                 <div className="product-price">{book.price}</div>
                
-                <a> <button className = "Wls-button" onclick="addtoWL()" >⭐</button> </a>
+                
                
 
                     </div>
