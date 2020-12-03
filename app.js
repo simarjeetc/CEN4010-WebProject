@@ -75,6 +75,34 @@ app.get("/users", function(req,res){
   })
 });
 
+// WISHLISTS COLLECTION OF THE MongoDB DATABASE
+
+const WishlistSchema = {
+  bookid: String,
+  name:String,
+  image: String,
+  author : String,
+  price : String
+};
+
+// Model
+const Wishlists = mongoose.model("Wishlists" , WishlistSchema);
+
+app.get("/wishlists", function(req,res){
+Wishlists.find(function(err, foundWistlist){
+    if (!err)
+    {
+       res.send(foundWistlist); 
+    }
+    else
+    {
+        res.send(err);
+    }
+})
+});
+
+module.exports = Wishlists;
+
 
 app.listen(5000, function() {
   console.log("Server started on port 5000");

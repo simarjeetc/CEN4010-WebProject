@@ -28,6 +28,7 @@ class Home extends Component {
         return <ul className="products">
 
             {this.state.books.map(book =>
+
                 <li>
                     <div className="product">
                         <Link to={'/product/' + [book.bookid]}>
@@ -45,7 +46,6 @@ class Home extends Component {
 
                         <a href="http://localhost:3000/ShoppingCart"><button className="Atc-button" >Add to Cart</button> </a>
                         <a href="http://localhost:3000/WishList"><button className="Atc-button">Add to WishList</button> </a>
-
 
 
                     </div>

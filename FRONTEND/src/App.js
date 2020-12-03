@@ -21,8 +21,10 @@ function App() {
         </div>
         <Route path ="/" component={BookBrowsingTab}/>
         <div className="header-links"> 
-        <Route path="/ShoppingCart/" component={ShoppingCart}/>
-                <a href="ShoppingCart">Cart 🛒</a>
+
+<Route path="/ShoppingCart/:id?" component={ShoppingCart}/>
+<a class = "cart-btn"href="ShoppingCart">Cart 🛒</a>
+<div class = "cart-items">{}</div>
 
         <Route path="/WishList/" component={WishList}/>
                 <a href="WishList">Wish List ⭐</a>
@@ -33,11 +35,7 @@ function App() {
         <a href="signin">Sign in</a>
     </div>
     </header>
-
-    <aside>
-        Shopping Categories 
-    </aside>
-
+    
     <main className="main">
         <div className="content">
         <Route path="/product/:bookid" component={BookDetails}/>
