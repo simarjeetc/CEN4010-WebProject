@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal'
 
+
 function BookDetails(props){
     const [books, setBooks] = useState([])
     const [id, setId] = useState()
@@ -32,16 +33,19 @@ function BookDetails(props){
     const addToCart = (books) => {
         alert( books.name + " has been added to your Cart! " + " There are " + (cart.length + 1) + " items in your cart." );
     setCart([...cart,books]);
-    console.log(cart);
+    console.log(cart)
     }
 
-  const addToWishList = (books) =>{
-  const CurrentWishList = addToWishList.map;
-  console.log(CurrentWishList);
-}
+    //WishList 
 
+    const sendToWishlist = () => {
+      props.history.push("/WishList/" + props.match.params.bookid);
+  }
+
+  
 return (
-    <div>
+   
+   <div>
 
     <div className = "back-to-home">
     <Link to="/" Back to home page></Link>
@@ -104,6 +108,28 @@ return (
               </div> 
            </li>
 
+           <br></br>
+
+           <li>
+             <b> Rating: </b>
+              <div>
+                  {books.rating} / 10
+              </div> 
+           </li>
+
+           <br></br>
+
+            <li>
+            <b> Reviews: </b>
+            <div>
+                {books.comments1} 
+                <br></br>
+                {books.comments2} 
+            </div> 
+            </li>
+
+
+
            </ul> 
     </div>
 
@@ -135,7 +161,7 @@ return (
                     </li>
 
                     <li>
-                    <a> <button className = "Wls-button" onClick= {addToWishList(books)} >⭐</button> </a>
+                     <button onClick = {sendToWishlist} className = "Wls-button">Add to Wishlist</button>
 
                     </li>
 
