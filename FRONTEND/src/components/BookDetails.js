@@ -1,10 +1,15 @@
 import React, {useState, useEffect } from 'react'
 import axios from 'axios'
 import '../App.css';
+
+import {Link, BrowserRouter, Route} from 'react-router-dom';
+import BookBrowsing from './BookBrowsing'
+
 import {Link} from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal'
 import { useDispatch, useSelector } from 'react-redux';
+
 
 function BookDetails(props){
     const [qty, setQty] = useState(1);
@@ -51,7 +56,7 @@ function BookDetails(props){
 
 return (
     <div>
-
+        <Route path ="/" exact={true} component={BookBrowsing}/>
     <div className = "back-to-home">
     <Link to="/" Back to home page></Link>
     </div>

@@ -4,16 +4,11 @@ import './App.css';
 import Home from './components/Home'
 import BookDetails from './components/BookDetails'
 
-import GenreFantasy from './components/GenreFantasy';
-import GenreScience from './components/GenreScience';
-import GenreSpeculative from './components/GenreSpeculative';
-
-
 
 import ShoppingCart from './components/ShoppingCart'
 import WishList from './components/WishList'
 import UserReview from './components/UserReview'
-import ClassList from './components/ClassList';
+import BookBrowsingTab from './components/BookBrowsing';
 
 function App() {
   return (
@@ -24,7 +19,7 @@ function App() {
         <div className="brand">
             <a class = "Title " href="/">Geek Text</a>
         </div>
-        <Route path ="/" exact={true} component={ClassList}/>
+        <Route path ="/" component={BookBrowsingTab}/>
         <div className="header-links"> 
 
 <Route path="/ShoppingCart/:id?" component={ShoppingCart}/>
@@ -44,11 +39,7 @@ function App() {
     <main className="main">
         <div className="content">
         <Route path="/product/:bookid" component={BookDetails}/>
-        
         <Route path="/" exact={true} component={Home} />
-        <Route path ="/Fantasy" component={GenreFantasy}/>
-        <Route path ="/Science" component={GenreScience}/>
-        <Route path ="/Speculative" component={GenreSpeculative}/>
         </div>
         
 
